@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html style="height:100%;width:100%">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>ESPN BCS Bug - CodePen</title>
+  <style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+</style>
+
+    <style>
+    @font-face {
+    font-family: myFirstFont;
+    src: url(esp_ital.ttf);
+    
+}
+body {
+  background: #017b0b;
+  color: white;
+  margin: 0 auto;
+  width: 704px;
+  height:100%;
+  font-family: verdana;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  border-left: 2px solid silver;
+  border-right: 2px solid silver;
+  display: inline-block;
+  background: rgba(0,0,0,.6);
+  margin: 140px 0 0 78px;
+  padding: 4px 100px;
+  width:414px;
+  text-align:center;
+}
+
+.espn, .team, .score, .quarter, .time, .down {
+  border: 1px solid silver;
+  display: inline;  
+  float: left;
+  text-transform: uppercase;
+  padding: 2px 0;
+  font-size: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+.espn {
+  font-style: italic;
+  padding: 2px 10px;
+  background: 
+    -webkit-gradient(linear, 0% 0%, 0% 81%, from(#9E9E9E), to(#000000));
+  background: 
+    -moz-linear-gradient(0% 81% 90deg,#9E9E9E, #000000);
+  border-left: 4px solid yellow;
+
+}
+
+.score{
+  padding: 2px 8px;
+  font-weight: 600;
+  border-right: 3px solid silver;
+  background: rgba(0,0,0,1);
+}
+
+.away{
+  padding: 2px 4px 2px 0;
+  background: -webkit-gradient(linear, 18% 0%, 46% 0%, from(#000000), to(#e4000f));
+}
+
+.home{
+  padding: 2px 16px;
+background: -webkit-gradient(linear, 18% 0%, 46% 0%, from(#000000), to(#DC143C));
+}
+
+.rank {
+  font-size: .7em;
+  margin-right: -5px;
+}
+
+.quarter, .time {
+  background: white;
+  color: black;
+  padding: 4px 1px;
+  text-transform: lowercase;
+  font-size: 16px;
+  border-top:2px solid silver;
+  border-bottom:1px solid silver;
+  box-shadow:inset 1px 1px 5px black;
+}
+
+.quarter{
+  padding: 4px 1px 4px 3px;
+}
+
+.time {
+  padding: 4px 2px 4px 7px;
+  margin-left:-1px;
+  border-left: none;
+}
+
+.play-clock{
+  background: red;
+  color: white;
+  font-size: 14px;
+  padding: 1px 2px;
+}
+
+.down{
+  background: rgba(0,0,0,.6);
+  text-transform: lowercase;
+  padding: 3px 20px;
+  font-size: 18px;
+  border-right: 4px solid yellow;
+  border-top:2px solid silver;
+  box-shadow:inset 1px 1px 15px black;
+}
+
+.bottom{
+  background: black;
+  width: 696px;
+}
+
+.away-timeouts {
+  float: left;
+  margin: 0 0 0 20px;
+  padding: 0 65px;
+}
+
+.timeout {
+  background: yellow;
+  padding: 2px 18px;
+  display: inline-block;
+  float: left;
+  margin: 0 3px;
+  border: 1px solid black;
+}
+
+.no{
+  background: #424242;
+}
+
+.home-timeouts{
+  float: left;
+  margin: 0 0 0 15px;
+}
+#back{
+    background: url(ohio.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+</style>
+
+</head>
+
+<body id="back">
+
+  <h1>Allstate Sugar Bowl</h1>
+<div class="espn">ESPN</div>
+<div class="away team">
+  <span>></span>
+  <span class="rank">4</span>
+  Ohio State
+</div>
+<div class="away-score score">56</div>
+<div class="home team">
+  <span class="rank">1</span>
+  Alabama  
+</div>
+<div class="home-score score">0</div>
+<div class="quarter">4th</div>
+<div class="time">0:00
+  <span class="play-clock">00</span>
+</div>
+<div class="down">1st & 10</div>
+<div class="clear"></div>
+<div class="bottom">
+  <div class="away-timeouts">
+    <div class="timeout yes"></div>
+    <div class="timeout yes"></div>
+    <div class="timeout no"></div>
+    <div class="clear"></div>
+  </div>
+   <div class="home-timeouts">
+    <div class="timeout yes"></div>
+    <div class="timeout yes"></div>
+    <div class="timeout yes"></div>
+    <div class="clear"></div>
+  </div>
+    <div class="clear"></div>
+</div>
+
+</body>
+
+</html>
